@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="200" height="200"></canvas>
+    <script>
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "Maroon";
+        ctx.fillRect(0, 0, 50, 100);
+        ctx.fillStyle = "PapayaWhip";
+        ctx.fillRect(50, 0, 50, 100);
+        ctx.fillStyle = "SeaGreen";
+        ctx.fillRect(100, 0, 50, 100);
+    </script>
+</body>
+
+</html>

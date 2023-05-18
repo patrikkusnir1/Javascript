@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hangman!</title>
+</head>
+
+<body>
+    <canvas id="canvas" width="400" height="200"></canvas>
+    
+    <script>
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext("2d");
+        // Functions
+
+
+        
+
+            var drawHangman = function (numberOfGuesses) {
+                
+                ctx.lineWidth = 4;
+                if (numberOfGuesses === 7) {
+                    ctx.strokeRect(20, 20, 20, 20);
+                }
+
+                else if (numberOfGuesses === 6) {
+                    ctx.beginPath();
+                    ctx.moveTo(20, 30);
+                    ctx.lineTo(20, 50);
+                }
+
+                else if (numberOfGuesses === 5) {
+                    ctx.moveTo(22, 50);
+                    ctx.lineTo(4, 45);
+                }
+
+                else if (numberOfGuesses === 4) {
+                    ctx.moveTo(22, 50);
+                    ctx.lineTo(38, 45);
+                }
+
+                else if (numberOfGuesses === 3) {
+                    ctx.moveTo(20, 50);
+                    ctx.lineTo(20, 75);
+                }
+
+                else if (numberOfGuesses === 2) {
+                    ctx.moveTo(20, 75);
+                    ctx.lineTo(5, 95);
+                }
+
+                else if (numberOfGuesses === 1) {
+                    ctx.moveTo(20, 75);
+                    ctx.lineTo(35, 95);
+                }
+
+                ctx.stroke();
+            }
+
+
+                var drawUnderscores = function (howMany) {
+                        ctx.lineWidth = 4;
+                        ctx.beginPath();
+  
+                        for (var i = 0; i < howMany; i++) {
+
+                            ctx.moveTo(( i * 30) + 10, 160);
+                            ctx.lineTo((i * 30) + 30, 160);
+                        }
+                        ctx.stroke();
+                    }
+
+        var drawCorrectGuess = function(guess, index) {
+            ctx.font = "20px Comic Sans MS";
+            ctx.fillText(guess.toUpperCase() (index * 30) + 10, 150);
+        }
+
+
+        var drawIncorrectGuess = function(guess, index) {
+            ctx.font = "20px Comic Sans MS";
+            ctx.fillText(guess.toUpperCase(), 380, (index * 20) + 40)
+            ctx.moveTo(380, (index * 20) + 30)
+            ctx.lineTo(400, (index * 20) + 30)
+            ctx.stroke();
+        }
+
+        var pickWord = function () {
+            // return a random word
+            var words = [
+                "javascript",
+                 "monkey",
+                 "amazing",
+                 "pancake",
+            ];
+            
+            return words[Math.floor(Math.random() * words.length)];
+        }
+
+
+
+        var setupAnswerArray = function (word) {
+            // return the answer array
+
+            var answerArray = [];
+            for (var i = 0; i < word.length; i++) {
+                answerArray[i] = "_";
+            }
+            return answerArray;
+        }
+
+        var showPlayerProgress = function (answerArray) {
+            // Use alert to show the player their progress
+            alert(answerArray.join(" "));
+        }
+
+        var getGuess = function () {
+            // use prompt to get a guess
+            var guess = prompt("Guess a letter, or click cancel to stop playing.");
+            guess = guess.toLowerCase();
+            return guess;
+        }
+
+        var updateGameState = function (guess, word, answerArray) {
+            // update answerArray and return number showing how many times the guess appears in the word so remaining letters can be updated
+
+            var appearances = 0;
+            for (var j = 0; j < word.length; j++) {
+
+                if (word[j] === guess) {
+                    answerArray[j] = guess;
+                    drawCorrectGuess(guess, j)
+                    appearances++;
+                }
+            }
+
+            return apperances;
+        }
+
+        var showAnswerAndCongratulatePlayer = function (answerArray) {
+            showPlayerProgress(answerArray);
+            alert(answerArray.join(" "));
+
+            if (remainingLetters === 0) {
+                alert("Good job! The answer is " + word);
+            }
+        }
+
+        var word = pickWord();
+        var answerArray = setupAnswerArray(word)
+        var remainingLetters = word.length;
+        var numberOfGuesses = 8;
+
+        drawUnderscores(word.length);
+
+        while (remainingLetters > 0 && numberOfGuesses > 0) {
+            showPlayerProgress(answerArray);
+            var guess = getGuess();
+
+            // exit the game loop
+
+            if (guess === null) {
+                break;
+            } else if (guess.length !== 1) {
+                alert("Please enter a single letter.");
+            }
+
+            // check if the guess is in the answer
+            else if (answerArray.indexOf(guess) >= 0) {
+                alert("You've already guessed the letter");
+            }
+
+            // Update the game state with the guess
+            else {
+                var correctGuesses = updateGameState(guess, word, answerArray);
+                
+                remainingLetters -= correctGuesses;
+
+            }
+
+
+            if (answerArray.indexOf(guess) == -1) {
+                alert("Wrong! Remainining: " + numberOfGuesses-- + " guesses.");
+                ;
+                
+
+
+            }
+
+        }
+
+        // the end of the game loop
+
+
+        //Show the answer and congratulate the player
+        showAnswerAndCongratulatePlayer(answerArray);
+
+
+        if (numberOfGuesses === 0) {
+            alert("You didn't guess the right answer! The answer is " + word);
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            drawHangman(numberOfGuesses);
+        }
+
+    </script>
+    </div>
+</body>
+
+</html>

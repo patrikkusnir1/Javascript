@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Canvas</title>
+</head>
+
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+    <canvas id="canvas" width="2000" height="2000"></canvas>
+    <script>
+
+        var circle = function (x, y, radius, fillCircle) {
+                ctx.beginPath();
+
+                ctx.arc(x, y, radius, 0, Math.PI * 2, false);
+
+                if (fillCircle) {
+                    ctx.fill();
+                }
+
+                ctx.stroke();
+
+            };
+
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+
+        $("#canvas").mousemove (function (event) {
+             
+            circle(event.pageX, event.pageY, 3, true);
+            
+        })
+
+
+
+    </script>
+</body>
+
+</html>
