@@ -1,5 +1,5 @@
-// multiplying numbers
-var product = 8 * 10;
-console.log(product)
+// dividing numbers
+var quotient = 66 / 33;
+console.log(quotient);
 
 
