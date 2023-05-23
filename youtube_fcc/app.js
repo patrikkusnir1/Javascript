@@ -1,5 +1,5 @@
-// adding two numbers
-var sum = 10 + 10;
-console.log(sum)
+// substraction two numbers
+var difference = 45 - 33;
+console.log(difference);
 
 
