@@ -1,10 +1,8 @@
-// Compound Assignment With Augmented Division
-var a = 48;
-var b = 108;
-var c = 33;
+// Declare string variables
 
-a /= 12;
-b /= 4; 
-c /= 11;
+// Example
+var firstName = "Alan";
+var lastName = "Turing";
 
-console.log(a, b, c);
+var myFirstName = "Beau";
+var myLastName = "Carnes"
