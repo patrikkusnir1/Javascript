@@ -1,7 +1,5 @@
-// decrementing numbers
-var myVar = 11;
-
-myVar--;
-console.log(myVar);
+// decimal numbers
+var ourDecimal = 5.7;
+var myDecimal = 0.009;
 
 
