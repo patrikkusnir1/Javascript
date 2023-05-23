@@ -1,2 +1,15 @@
-// Quoting Strings with Single Quotes
-var myStr = '<a href="http://www.example.com" target="_blank">Link</a>';
+// Escape sequences in strings
+/********** 
+CODE OUTPUT
+\'  single quote
+\"  double quote
+\\  backslash
+\n  newline
+\r  carriage return
+\t  tab
+\b  backspace
+\f  form feed
+
+************/
+var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+console.log(myStr);
