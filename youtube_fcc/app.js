@@ -1,5 +1,7 @@
-// dividing numbers
-var quotient = 66 / 33;
-console.log(quotient);
+// incrementing numbers
+var myVar = 87;
+
+myVar++;
+console.log(myVar);
 
 
