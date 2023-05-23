@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bus Timetable App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            font-size: 28px;
+            margin-top: 0;
+        }
+
+        .route {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .timetable {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .timetable-item {
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .time {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bus Timetable App</h1>
+
+        <div class="route" id="routeA"></div>
+        <ul class="timetable" id="timetableA"></ul>
+
+        <div class="route" id="routeB"></div>
+        <ul class="timetable" id="timetableB"></ul>
+    </div>
+
+    <script>
+        // Sample bus timetable data
+        var busTimetable = [
+            { route: 'A', time: '9:00 AM' },
+            { route: 'B', time: '9:15 AM' },
+            { route: 'A', time: '9:30 AM' },
+            { route: 'C', time: '9:45 AM' },
+            { route: 'B', time: '10:00 AM' },
+            { route: 'A', time: '10:15 AM' }
+        ];
+
+        // Function to display bus timetable
+        function displayTimetable(route) {
+            var routeDiv = document.getElementById('route' + route);
+            var timetableUL = document.getElementById('timetable' + route);
+
+            routeDiv.innerHTML = 'Bus Timetable for Route ' + route;
+            timetableUL.innerHTML = '';
+
+            for (var i = 0; i < busTimetable.length; i++) {
+                if (busTimetable[i].route === route) {
+                    var timetableItem = document.createElement('li');
+                    timetableItem.className = 'timetable-item';
+
+                    var timeSpan = document.createElement('span');
+                    timeSpan.className = 'time';
+                    timeSpan.textContent = busTimetable[i].time;
+
+                    var routeSpan = document.createElement('span');
+                    routeSpan.textContent = 'Route ' + route;
+
+                    timetableItem.appendChild(timeSpan);
+                    timetableItem.appendChild(routeSpan);
+
+                    timetableUL.appendChild(timetableItem);
+                }
+            }
+        }
+
+        // Example usage
+        displayTimetable('A');
+        displayTimetable('B');
+    </script>
+</body>
+
+</html>

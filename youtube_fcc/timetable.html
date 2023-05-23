@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="timetable-container" id="timetable"></div>
+    <script>
+        // Bus timetable data
+
+            var busTimetable = [
+                { route: "A", time: "9:00 AM" },
+                { route: "B", time: "9:15 AM" },
+                { route: "A", time: "9:30 AM" },
+                { route: "C", time: "9:45 AM" },
+                { route: "B", time: "10:00 AM" },
+                { route: "A", time: "10:15 AM" },
+            ]
+
+            // function to display bus table
+            function displayTimetable(route) {
+                var timetableHTML = '<div class="route-title">Bus Timetable for Route ' + route + '</div>';
+                timetableHTML += '<ul class="timetable-list">';
+
+                for (var i = 0; i < busTimetable.length; i++) {
+                    if (busTimetable[i].route === route) {
+                        timetableHTML += "<li>" + busTimetable[i].time + "</li>";
+                    }
+                }
+
+                timetableHTML += "</ul>";
+
+                return timetableHTML
+            }
+        // Get the timetable DIV element
+        var timetableDiv = document.getElementById("timetable");
+
+        var routeA = displayTimetable('A');
+        timetableDiv.innerHTML = routeA;
+
+        var routeB = displayTimetable('B');
+        timetableDiv.innerHTML += routeB;
+
+    </script>
+</body>
+</html>
+
