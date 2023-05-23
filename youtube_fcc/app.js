@@ -1,7 +1,7 @@
-// incrementing numbers
-var myVar = 87;
+// decrementing numbers
+var myVar = 11;
 
-myVar++;
+myVar--;
 console.log(myVar);
 
 
