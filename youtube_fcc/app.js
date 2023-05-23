@@ -1,15 +1,6 @@
-// Escape sequences in strings
-/********** 
-CODE OUTPUT
-\'  single quote
-\"  double quote
-\\  backslash
-\n  newline
-\r  carriage return
-\t  tab
-\b  backspace
-\f  form feed
+// Contenating strings with + operator
+// Example 
+var outStr = "I come first. " + "I come second."
 
-************/
-var myStr = "FirstLine\n\t\\SecondLine\nThirdLine";
+var myStr = "This is the start. " + "This is the end."
 console.log(myStr);
