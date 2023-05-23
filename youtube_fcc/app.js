@@ -1,5 +1,5 @@
-// decimal numbers
-var ourDecimal = 5.7;
-var myDecimal = 0.009;
+// multiply decimals
+var product = 2.0 * 2.5;
+console.log(product)
 
 
