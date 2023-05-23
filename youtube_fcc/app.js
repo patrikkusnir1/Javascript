@@ -1,5 +1,6 @@
-// divide decimals
-var quotient = 4.4 / 2.0;
-console.log(quotient);
+// finding a remainder
 
+var remainder;
+remainder = 11 % 3;
+console.log(remainder);
 
