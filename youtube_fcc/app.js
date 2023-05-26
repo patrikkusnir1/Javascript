@@ -1,12 +1,11 @@
-// Use Bracket Notation to Find the Last Character in a String
+// Use Bracket Notation to Find the Nth-to-Last Character in a String
 
 // Example
 var firstName = "Ada";
-var lastLetterOfFirstName = firstName[firstName.length - 1];
+var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
 
 // Setup 
-
-var lastName = "Lovelace"
-
-var lastLetterOfLastName = lastName[lastName.length - 1];
-console.log(lastLetterOfLastName); 
+var lastName = "Lovelace";
+var secondToLastLetterofLastName = lastName[lastName.length - 2];
+console.log(thirdToLastLetterOfFirstName);
+console.log(secondToLastLetterofLastName);
