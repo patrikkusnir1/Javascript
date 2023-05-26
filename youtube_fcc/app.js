@@ -1,10 +1,10 @@
-// String Immutability
+// Use Bracket Notation to Find the Nth Character in a String
 
-// Setup
-var myStr = "Jello World!"
+// Example
+var firstName = "Ada";
+var secondLetterOfFirstName = firstName[1];
 
-myStr[0] = "H"; // Fix me
-//console.log(myStr); // this way it doesn't work
+//Setup 
+var lastName = "Lovelace";
 
-myStr = "Hello World";
-console.log(myStr);
+var thirdLetterOfLastName = lastName[2]; 
