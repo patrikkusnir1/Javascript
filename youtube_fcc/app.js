@@ -1,10 +1,14 @@
-// Appending Variables to Strings
+// Find length of string
 // Example 
-var anAdjective = "awesome!";
-var ourStr = "freeCodeCamp is ";
+var firstNameLength = 0;
+var firstName = "Ada";
 
-var someAdjective = "worthwhile";
-var myStr = "Learning to code is ";
-myStr += someAdjective;
-console.log(myStr)
+firstNameLength = firstName.length;
+
+//Setup 
+var lastNameLength = 0;
+var lastName = "Lovelace";
+
+lastNameLength = lastName.length;
+console.log(lastNameLength);
 
