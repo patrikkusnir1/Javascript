@@ -1,8 +1,10 @@
-// Constructing strings with variable
+// Appending Variables to Strings
 // Example 
-var ourName = "freeCodeCamp";
-var ourStr = "Hello, our name is " + ourName + ", how are you?";
+var anAdjective = "awesome!";
+var ourStr = "freeCodeCamp is ";
 
-var myName = "Beau";
-var myStr = "My name is " + myName + " and I am well!";
-console.log(myStr);
+var someAdjective = "worthwhile";
+var myStr = "Learning to code is ";
+myStr += someAdjective;
+console.log(myStr)
+
