@@ -1,14 +1,14 @@
-// Find length of string
+// Use Bracket Notation to Find the First Character in a String
 // Example 
-var firstNameLength = 0;
+var firstLetterOfFirstName = "";
 var firstName = "Ada";
 
-firstNameLength = firstName.length;
+firstLetterOfFirstName = firstName[0];
 
 //Setup 
-var lastNameLength = 0;
-var lastName = "Lovelace";
 
-lastNameLength = lastName.length;
-console.log(lastNameLength);
+var firstLetterOfLastName = "";
+var lastName = "Lovelace";
+firstLetterOfLastName = lastName[0];
+console.log(firstLetterOfLastName)
 
