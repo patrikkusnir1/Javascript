@@ -1,7 +1,11 @@
-// Nest one Array within Another Array - multidimensional
+// Access Array Data with Indexes
 
 // Example
-var ourArray = [["the universe", 42], ["everything", 1010101]];
+var ourArray = [50, 60, 70];
+var ourData = ourArray[0];
 
-var myArray = [["Bulls", 23], ["White Sox", 45]];
-console.log(myArray);
+// Setup
+
+var myArray = [50, 60, 70];
+var myData = myArray[0];
+console.log(myData);
