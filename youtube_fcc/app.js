@@ -1,11 +1,6 @@
-// Word Blanks
+// Store Multiple Values in one Variable using JavaScript Arrays
 
-function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
-    var result = "";
-    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
-    return result;
+// Example
+var ourArray = ["John", 23];
 
-}
-
-console.log(wordBlanks("dog", "big", "ran", "quickly"));
-console.log(wordBlanks("bike", "slow", "flew", "slowly"));
+var myArray = ["Quincy", 1];
