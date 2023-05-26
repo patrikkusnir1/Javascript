@@ -1,14 +1,10 @@
-// Use Bracket Notation to Find the First Character in a String
-// Example 
-var firstLetterOfFirstName = "";
-var firstName = "Ada";
+// String Immutability
 
-firstLetterOfFirstName = firstName[0];
+// Setup
+var myStr = "Jello World!"
 
-//Setup 
+myStr[0] = "H"; // Fix me
+//console.log(myStr); // this way it doesn't work
 
-var firstLetterOfLastName = "";
-var lastName = "Lovelace";
-firstLetterOfLastName = lastName[0];
-console.log(firstLetterOfLastName)
-
+myStr = "Hello World";
+console.log(myStr);
