@@ -1,11 +1,11 @@
-// Use Bracket Notation to Find the Nth-to-Last Character in a String
+// Word Blanks
 
-// Example
-var firstName = "Ada";
-var thirdToLastLetterOfFirstName = firstName[firstName.length - 3];
+function wordBlanks(myNoun, myAdjective, myVerb, myAdverb) {
+    var result = "";
+    result += "The " + myAdjective + " " + myNoun + " " + myVerb + " to the store " + myAdverb + ".";
+    return result;
 
-// Setup 
-var lastName = "Lovelace";
-var secondToLastLetterofLastName = lastName[lastName.length - 2];
-console.log(thirdToLastLetterOfFirstName);
-console.log(secondToLastLetterofLastName);
+}
+
+console.log(wordBlanks("dog", "big", "ran", "quickly"));
+console.log(wordBlanks("bike", "slow", "flew", "slowly"));
