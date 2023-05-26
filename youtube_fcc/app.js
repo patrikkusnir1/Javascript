@@ -1,10 +1,7 @@
-// Modify Array Data With Indexes
+// Access Multi-Dimensional Arrays With Indexes
 
-// Example
-var ourArray = [18, 64, 99];
-ourArray[1] = 45; // Our array now equals [18, 45, 99]
+//Setup 
+var myArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9], [[10, 11, 12], 13, 14]];
 
-// Setup 
-var myArray = [18, 64, 99];
-myArray[0] = 45;
-console.log(myArray);
+var myData = myArray[2][1]; // how to access 8?
+console.log(myData);
