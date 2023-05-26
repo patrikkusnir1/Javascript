@@ -1,6 +1,7 @@
-// Store Multiple Values in one Variable using JavaScript Arrays
+// Nest one Array within Another Array - multidimensional
 
 // Example
-var ourArray = ["John", 23];
+var ourArray = [["the universe", 42], ["everything", 1010101]];
 
-var myArray = ["Quincy", 1];
+var myArray = [["Bulls", 23], ["White Sox", 45]];
+console.log(myArray);
