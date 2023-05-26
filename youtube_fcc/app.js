@@ -1,9 +1,8 @@
-// Contenating strings with + equal operator
+// Constructing strings with variable
 // Example 
-var ourStr = "I come first. ";
-ourStr += "I come second.";
+var ourName = "freeCodeCamp";
+var ourStr = "Hello, our name is " + ourName + ", how are you?";
 
-myStr = "This is the first sentence. "
-myStr += "This is the second sentence."
-
+var myName = "Beau";
+var myStr = "My name is " + myName + " and I am well!";
 console.log(myStr);
